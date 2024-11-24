@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Voice Assistant</h1>
+    <button id="start-btn">Start Listening</button>
+    <p id="status">Say "Search for [query]" or "Open calculator"</p>
+    
+    <!-- Styled mini-browser -->
+    <div class="mini-browser">
+      <div class="browser-header">
+        <p id="browser-title">Mini Browser</p>
+      </div>
+      <iframe id="search-results" src="about:blank"></iframe>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
