@@ -32,6 +32,26 @@ app.get('/open', (req, res) => {
             case 'microsoft edge':
                 command = 'start microsoft-edge:'; // For Microsoft Edge
                 break;
+            case 'youtube':
+             command = 'start chrome https://www.youtube.com'; // Opens Chrome with YouTube
+              break;
+              case 'webwhatsapp':
+             command = 'start chrome https://web.whatsapp.com/'; // Opens Chrome with whatsapp web
+              break;
+              case 'spotify':
+             command = 'start spotify'; // Opens Chrome with YouTube
+              break;
+              case 'store':
+                command='start ms-windows-store:'; // open ms store
+                break;
+                case 'whatsapp':
+                command= 'start whatsapp:';
+                break;
+                case 'linkdin':
+             command = 'start chrome https://www.linkedin.com/feed//'; // Opens Chrome with linkdin
+              break;
+
+
             
         // Add more cases as needed
         default:
