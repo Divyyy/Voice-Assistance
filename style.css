@@ -5,7 +5,8 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
-  transition: background 1s ease; /* Smooth transition for daylight effect */
+  transition: background 30s ease; /* Smooth transition for daylight effect */
+  
 }
 
 .container {
@@ -21,17 +22,20 @@ button {
 
 .mini-browser {
   margin-top: 20px;
-  width: 700px;
+  width:1000px;
+  
+  
+  
  
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: white;
-  overflow: hidden;
+  border:1px solid#ccc;
+  border-radius: 45px;
+  background:transparent;
+  overflow: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .browser-header {
-  background: #e0e0e0;
+  background: transparent;
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ccc;
@@ -47,5 +51,5 @@ button {
 
 /* Initial background (fallback if JavaScript is disabled) */
 body {
-  background: linear-gradient(to bottom, #87CEEB, #FFDD99); /* Daytime colors */
+  background-image:'url(EVE.jpg)';/* Daytime colors */
 }
