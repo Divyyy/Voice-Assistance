@@ -56,6 +56,24 @@ recognition.onresult = (event) => {
       } else if (command.includes("open chrome")) {
           appName = 'chrome';
       }
+        else if(command.includes("open youtube")){
+          appName = 'youtube';
+        }
+        else if (command.includes("open spotify")){
+          appName = 'spotify';
+        }
+        else if (command.includes('open store')){
+          appName = 'store';
+        }
+        else if (command.includes('open web whatsapp')){
+          appName= 'webwa';
+        }
+        else if (command.includes('whatsapp desktop')){
+          appName='whatsapp';
+        }
+        else if(command.includes('link')){
+          appName = 'linkdin';
+        }
 
       if (appName) {
           fetch(`http://localhost:3003/open?app=${appName}`)
@@ -95,19 +113,29 @@ function updateBackground() {
   let gradient;
   if (hour >= 5 && hour < 8) {
     // Early morning
-    gradient = 'linear-gradient(to bottom, #FFD700, #FF4500)'; // Golden hour
+    body.style.backgroundImage = 'url(GOLDENHOUR.jpg)'; // Replace with your image URL
+    body.style.backgroundSize = 'cover'; // Ensures the image covers the entire background
+    body.style.backgroundPosition = 'center'; // Golden hour
   } else if (hour >= 8 && hour < 17) {
     // Daytime
-    gradient = 'linear-gradient(to bottom, #87CEEB, #FFDD99)'; // Blue sky
-  } else if (hour >= 17 && hour < 18) {
+    body.style.backgroundImage = 'url(DAYTIME.jpg)'; // Replace with your image URL
+    body.style.backgroundSize = 'cover'; // Ensures the image covers the entire background
+    body.style.backgroundPosition = 'center'; // Blue sky
+  } else if (hour >= 17 && hour < 19) {
     // Evening
-    gradient = 'linear-gradient(to bottom, #FF6347, #2E8B57)'; // Sunset colors
+    body.style.backgroundImage = 'url(EVE.jpg)'; // Replace with your image URL
+    body.style.backgroundSize = 'cover'; // Ensures the image covers the entire background
+    body.style.backgroundPosition = 'center';// Sunset colors
   } else {
     // Nighttime
-    gradient = 'linear-gradient(to bottom, #2c3e50, #000000)'; // Dark night
+    body.style.backgroundImage = 'url(NIG.jpg)'
+    body.style.backgroundSize = 'cover';
+    body.style.backgroundPosition = 'center';
+    body.style.color = 'white';
+     // Dark night
   }
 
-  body.style.background = gradient;
+  
 }
 
 // Update the background immediately on page load
